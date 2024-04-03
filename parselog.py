@@ -110,7 +110,7 @@ def process(file_name:str):
         tmp_infos = parse_line_log(line)
 
         if tmp_infos and isinstance(tmp_infos, list):
-            log_infos = log_infos + tmp_infos
+            log_infos.append(tmp_infos[0])
         else:
             error_line_count = error_line_count + 1
             print('Error line:{}'.format(line))
